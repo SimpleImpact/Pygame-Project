@@ -1,6 +1,5 @@
 #py -m pip install
 import pygame
-import config
 
 # pygame setup
 pygame.init()
