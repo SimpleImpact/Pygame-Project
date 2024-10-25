@@ -1,6 +1,5 @@
 #py -m pip install
 import pygame
-import config
 
 # pygame setup
 pygame.init()
@@ -20,7 +19,7 @@ while running:
     #pygame.draw.rect(screen, "Black", button)
     font = pygame.font.SysFont("Algerian", 60, False)
     text = pygame.font.Font.render(font, "+", True, (0, 0, 0))
-    screen.blit(text, (20, 20))
+    screen.blit(text, (20, 10))
     for event in pygame.event.get():
         if event.type == pygame.QUIT or keys[pygame.K_e]:
             running = False
