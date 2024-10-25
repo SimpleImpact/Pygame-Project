@@ -12,8 +12,10 @@ running = True
 dt = 0
 holder = 0
 buttons = [(20, 20, 50, 50)]
-
+font = pygame.font.SysFont("consolas", 60, True)
 button = (20, 20, 50, 50)
+
+# ================== || Grid Setings || ======================
 
 def button(x, y, w, h):
     mouseX, mouseY = pygame.mouse.get_pos()
@@ -32,7 +34,6 @@ while running:
     # ================== || Variables || =====================
     screen.fill("White")
     keys = pygame.key.get_pressed()
-    font = pygame.font.SysFont("Algerian", 60, False)
     text = pygame.font.Font.render(font, "+", True, (0, 0, 0))
     # =================== || Buttons || ======================
     l, m, r = pygame.mouse.get_pressed(3)
@@ -46,9 +47,9 @@ while running:
         if event.type == pygame.QUIT or keys[pygame.K_e]:
             running = False
     # =================== || Renderer || =====================
+    screen.blit(text, (20, 20))
     pygame.display.update()
     dt = clock.tick(240) / 1000
-    screen.blit(text, (20, 20))
     # ========================================================
 
 pygame.quit()
